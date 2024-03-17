@@ -221,6 +221,11 @@
             bindings = <&esszet>;
             key-positions = <26 54>;
         };
+
+        reset-bl {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <5 4 3 2>;
+        };
     };
 
     keymap {
