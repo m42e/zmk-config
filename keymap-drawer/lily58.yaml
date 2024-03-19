@@ -92,7 +92,7 @@ layers:
   - '%'
   - ^
   - '&'
-  - KP MULTIPLY
+  - '*'
   - (
   - )
   - '~'
@@ -295,7 +295,7 @@ layers:
   - {t: '5', h: toggle}
   - {t: '5', h: toggle}
   - {t: ▽, type: trans}
-  - ''
+  - {t: ▽, type: trans}
   - ''
 combos:
 - p: [54, 53]
