@@ -71,7 +71,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&disconnect_all'
   - F1
   - F2
   - F3
@@ -101,7 +101,7 @@ layers:
   - EP OFF
   - EP TOG
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - OUT TOG
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
