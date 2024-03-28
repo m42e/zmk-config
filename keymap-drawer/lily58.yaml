@@ -55,7 +55,7 @@ layers:
   - LGUI
   - {t: ESCAPE, h: raise}
   - {t: ENTER, h: braces}
-  - {t: SPACE, h: '5'}
+  - SPACE
   - {t: BACKSPACE, h: lower}
   - {t: '5', h: toggle}
   - RGUI
@@ -293,7 +293,7 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - {t: '5', h: toggle, type: held}
+  - {t: '5', h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
