@@ -51,7 +51,7 @@ layers:
   - .
   - /
   - {t: '=', h: RCTRL}
-  - LALT
+  - {t: LEFT ALT, h: '5'}
   - LGUI
   - {t: ESCAPE, h: raise}
   - {t: ENTER, h: braces}
@@ -177,7 +177,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  numpad: ['', '', '', '', '', '', '', KP DIVIDE, KP ASTERISK, LG(KP SUBTRACT), '', '', '', '', '', '', '', '', KP 7, KP 8, KP 9, KP PLUS, '', '', '', '', '', '',
+  numpad: ['', '', '', '', '', '', '', KP DIVIDE, KP ASTERISK, Gui+ KP SUBTRACT, '', '', '', '', '', '', '', '', KP 7, KP 8, KP 9, KP PLUS, '', '', '', '', '', '',
     '', '', KP 4, KP 5, KP 6, KP ENTER, '', '', '', '', '', '', '', '', '', '', KP 1, KP 2, KP 3, KP DOT, KP COMMA, '', '', '', '', '', KP 0, '', '', '']
   braces:
   - ''
@@ -258,22 +258,22 @@ layers:
   - ''
   - ''
   - ''
+  - {t: '&umlaut_u', s: '&umlaut_capital_u'}
   - ''
-  - ''
-  - ''
+  - {t: '&umlaut_o', s: '&umlaut_capital_o'}
   - ''
   - ''
   - {t: ▽, type: trans}
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
+  - {t: '&umlaut_a', s: '&umlaut_capital_a'}
+  - '&esszet'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
   - ''
@@ -289,7 +289,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - {type: held}
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -300,14 +300,6 @@ layers:
 combos:
 - p: [54, 53]
   k: lower
-- p: [25, 54]
-  k: {t: '&umlaut_a', s: '&umlaut_capital_a'}
-- p: [19, 53]
-  k: {t: '&umlaut_u', s: '&umlaut_capital_u'}
-- p: [53, 21]
-  k: {t: '&umlaut_o', s: '&umlaut_capital_o'}
-- p: [26, 54]
-  k: '&esszet'
 - p: [5, 4, 3, 2]
   k: BT CLR ALL
 - p: [6, 7, 8, 9]

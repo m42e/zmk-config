@@ -215,26 +215,6 @@
             key-positions = <54 53>;
         };
 
-        combo_umlaut_a {
-            bindings = <&umlaut_behaviour_a>;
-            key-positions = <25 54>;
-        };
-
-        combo_umlaut_u {
-            bindings = <&umlaut_behaviour_u>;
-            key-positions = <19 53>;
-        };
-
-        combo_umlaut_o {
-            bindings = <&umlaut_behavior_o>;
-            key-positions = <53 21>;
-        };
-
-        combo_umlaut_s {
-            bindings = <&esszet>;
-            key-positions = <26 54>;
-        };
-
         reset-bl {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <5 4 3 2>;
@@ -258,11 +238,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp GRAVE                     &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                  &kp N6           &kp N7  &kp N8     &kp N9   &kp N0    &backspace_or_del
-&kp TAB                       &kp Q   &kp W   &kp E     &kp R     &kp T                                   &kp Y            &kp U   &kp I      &kp O    &kp P     &kp MINUS
-&hold_word_caps LEFT_SHIFT 0  &kp A   &kp S   &kp D     &kp F     &kp G                                   &kp H            &kp J   &kp K      &kp L    &kp SEMI  &mt RSHIFT SQT
-&kp LCTRL                     &kp Z   &kp X   &kp C     &kp V     &kp B         &kp LBKT       &kp RBKT   &kp N            &kp M   &kp COMMA  &kp DOT  &kp FSLH  &mt RCTRL EQUAL
-                                              &kp LALT  &kp LGUI  &lt 2 ESCAPE  &lt 4 ENTER    &kp SPACE  &lt 1 BACKSPACE  &tog 5  &kp RGUI
+&kp GRAVE                     &kp N1  &kp N2  &kp N3          &kp N4    &kp N5                                  &kp N6           &kp N7  &kp N8     &kp N9   &kp N0    &backspace_or_del
+&kp TAB                       &kp Q   &kp W   &kp E           &kp R     &kp T                                   &kp Y            &kp U   &kp I      &kp O    &kp P     &kp MINUS
+&hold_word_caps LEFT_SHIFT 0  &kp A   &kp S   &kp D           &kp F     &kp G                                   &kp H            &kp J   &kp K      &kp L    &kp SEMI  &mt RSHIFT SQT
+&kp LCTRL                     &kp Z   &kp X   &kp C           &kp V     &kp B         &kp LBKT       &kp RBKT   &kp N            &kp M   &kp COMMA  &kp DOT  &kp FSLH  &mt RCTRL EQUAL
+                                              &lt 5 LEFT_ALT  &kp LGUI  &lt 2 ESCAPE  &lt 4 ENTER    &kp SPACE  &lt 1 BACKSPACE  &tog 5  &kp RGUI
             >;
         };
 
@@ -322,11 +302,11 @@
 
         layer_5 {
             bindings = <
-&none   &none   &none   &none   &none   &none                     &none   &none   &none   &none   &none   &trans
-&none   &none   &none   &none   &none   &none                     &none   &none   &none   &none   &none   &none
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&none   &none   &none   &none   &none   &none   &none     &none   &none   &none   &none   &none   &none   &none
-                        &none   &none   &none   &trans    &tog 5  &trans  &trans  &none
+&none   &none                &none    &none   &none   &none                     &none   &none                &none   &none               &none   &trans
+&none   &none                &none    &none   &none   &none                     &none   &umlaut_behaviour_u  &none   &umlaut_behavior_o  &none   &none
+&trans  &umlaut_behaviour_a  &esszet  &trans  &trans  &trans                    &trans  &trans               &trans  &trans              &trans  &trans
+&none   &none                &none    &none   &none   &none   &none     &none   &none   &none                &none   &none               &none   &none
+                                      &none   &none   &none   &trans    &tog 5  &trans  &trans               &none
             >;
         };
     };
