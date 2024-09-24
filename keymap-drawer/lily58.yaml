@@ -13,7 +13,7 @@ layers:
   - '9'
   - '0'
   - {t: BACKSPACE, s: DELETE}
-  - TAB
+  - {t: TAB, h: lower}
   - Q
   - W
   - E
@@ -58,7 +58,7 @@ layers:
   - SPACE
   - {t: BACKSPACE, h: lower}
   - {t: '5', h: toggle}
-  - RGUI
+  - '|'
   lower:
   - BT CLR
   - {t: BT, h: '0'}
@@ -72,7 +72,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&disconnect_all'
-  - F1
+  - {t: F1, type: held}
   - F2
   - F3
   - F4
@@ -115,7 +115,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   raise:
