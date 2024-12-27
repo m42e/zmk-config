@@ -1,0 +1,42 @@
+/*
+ * Copyright (c) 2020 Pete Johanson
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "lily58.dtsi"
+
+&default_transform {
+    col-offset = <6>;
+};
+
+&kscan0 {
+    col-gpios
+        = <&pro_micro 10 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 16 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 14 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 19 GPIO_ACTIVE_HIGH>
+        ;
+};
+
+&pro_micro_i2c {
+    status = "okay";
+    glidepoint0: glidepoint@2a {
+        status = "okay";
+    };
+};
+
+&pro_micro_i2c_default {
+    group1 {
+      bias-pull-up;
+    };
+};
+
+/ {
+    /* THIS only makes keymap binding happy, nothing happens on peripheral side */
+	glidepoint1: virtual_input {
+		compatible = "zmk,virtual-input";
+	};
+};
