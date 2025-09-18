@@ -26,9 +26,7 @@
 };
 
 &glidepoint_listener {
-    compatible = "zmk,input-listener";
     status = "okay";
-    device = <&glidepoint>;
 };
 
 &pro_micro_i2c_default {
