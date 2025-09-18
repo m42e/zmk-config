@@ -109,6 +109,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
     glidepoint: glidepoint@2a {
         compatible = "cirque,pinnacle";
         reg = <0x2a>;
+        dr-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH)>;
         status = "disabled";
         sensitivity = "2x";
         sleep; 
