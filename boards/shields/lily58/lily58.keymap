@@ -9,6 +9,13 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
+&glidepoint_listener {
+    scroller {
+        layers = <LOWER>;
+        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 5>;
+    };
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
