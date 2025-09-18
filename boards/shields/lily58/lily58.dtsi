@@ -119,6 +119,26 @@ cirque_pinnacle_i2c: &i2c0 {
     clock-frequency = <I2C_BITRATE_FAST>;
 };
 
+
+// Enable custom i2c for the Right side
+
+&cirque_pinnacle_i2c {
+    status = "okay";
+
+    glidepoint: glidepoint@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        status = "disabled";
+        // Pin marked as Serial in the Dilemma PCB (008/D0) is connected to the S pin in the TRRS footprint, 
+        // so connecting this S pin to the DR pin in the Cirque, 
+        // will make the MCU be notified when there is data ready in the cirque
+        dr-gpios = <&pro_micro 0 (GPIO_ACTIVE_HIGH)>;
+        sensitivity = "2x";
+        sleep; 
+        no-taps;
+    };
+};
+
 / {
     split_inputs {
         #address-cells = <1>;
