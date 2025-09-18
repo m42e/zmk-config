@@ -1,4 +1,4 @@
-layout: {qmk_keyboard: lily58_rotated}
+layout: {zmk_keyboard: lily58mb}
 layers:
   default:
   - '`'
@@ -177,7 +177,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  numpad: ['', '', '', '', '', '', '', KP DIVIDE, KP ASTERISK, Gui+ KP SUBTRACT, '', '', '', '', '', '', '', '', KP 7, KP 8, KP 9, KP PLUS, '', '', '', '', '', '',
+  numpad: ['', '', '', '', '', '', '', KP DIVIDE, KP ASTERISK, Gui+KP SUBTRACT, '', '', '', '', '', '', '', '', KP 7, KP 8, KP 9, KP PLUS, '', '', '', '', '', '',
     '', '', KP 4, KP 5, KP 6, KP ENTER, '', '', '', '', '', '', '', '', '', '', KP 1, KP 2, KP 3, KP DOT, KP COMMA, '', '', '', '', '', KP 0, '', '', '']
   braces:
   - ''
