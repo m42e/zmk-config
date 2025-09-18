@@ -128,7 +128,7 @@ cirque_pinnacle_i2c: &i2c0 {
     glidepoint: glidepoint@2a {
         compatible = "cirque,pinnacle";
         reg = <0x2a>;
-        status = "disabled";
+        status = "okay";
         // Pin marked as Serial in the Dilemma PCB (008/D0) is connected to the S pin in the TRRS footprint, 
         // so connecting this S pin to the DR pin in the Cirque, 
         // will make the MCU be notified when there is data ready in the cirque
