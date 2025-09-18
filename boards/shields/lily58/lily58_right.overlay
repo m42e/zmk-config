@@ -22,6 +22,54 @@
 };
 
 
+
+&pinctrl {
+    i2c0_default: i2c0_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+                <NRF_PSEL(TWIM_SCL, 0, 20)>;
+			// bias-pull-up; //replaced by physical resistors, since it was not stable
+        };
+    };
+
+    i2c0_sleep: i2c0_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+                <NRF_PSEL(TWIM_SCL, 0, 20)>;
+            low-power-enable;
+			// bias-pull-up; //replaced by physical resistors, since it was not stable
+        };
+    };
+};
+
+cirque_pinnacle_i2c: &i2c0 {
+    compatible = "nordic,nrf-twim";
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
+    clock-frequency = <I2C_BITRATE_FAST>;
+};
+
+// Enable custom i2c for the Right side
+
+&cirque_pinnacle_i2c {
+    status = "okay";
+
+    glidepoint: glidepoint@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        status = "okay";
+        // Pin marked as Serial in the Dilemma PCB (008/D0) is connected to the S pin in the TRRS footprint, 
+        // so connecting this S pin to the DR pin in the Cirque, 
+        // will make the MCU be notified when there is data ready in the cirque
+        dr-gpios = <&pro_micro 0 (GPIO_ACTIVE_HIGH)>;
+        sensitivity = "2x";
+        sleep; 
+        no-taps;
+    };
+};
+
+
 &i2c1 {
     pinnacle@2a {
         compatible = "cirque,pinnacle";
@@ -44,16 +92,6 @@
       bias-pull-up;
     };
 
-    glidepoint: glidepoint@0 {
-        compatible = "cirque,pinnacle";
-        reg = <0x2a>;
-        status = "okay";
-        dr-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH)>;
-        sensitivity = "2x";
-        sleep;
-        //no-taps;
-        y-invert;
-    };
 };
 
 // Overrides for the input-split child node
