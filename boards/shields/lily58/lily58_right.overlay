@@ -21,11 +21,14 @@
         ;
 };
 
-&pro_micro_i2c {
+&glidepoint {
     status = "okay";
-    glidepoint0: glidepoint@2a {
-        status = "okay";
-    };
+};
+
+&glidepoint_listener {
+    compatible = "zmk,input-listener";
+    status = "okay";
+    device = <&glidepoint>;
 };
 
 &pro_micro_i2c_default {
