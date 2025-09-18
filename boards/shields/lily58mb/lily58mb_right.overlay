@@ -23,30 +23,12 @@
 
 
 
-// Enable custom i2c for the Right side
-
 &pro_micro_i2c {
     status = "okay";
-
-    glidepoint: glidepoint@2a {
-        status = "okay";
-    };
 };
-
 
 &glidepoint {
     status = "okay";
-};
-
-&glidepoint_listener {
-    status = "okay";
-};
-
-&i2c0_default {
-    group1 {
-      bias-pull-up;
-    };
-
 };
 
 // Overrides for the input-split child node
