@@ -31,13 +31,6 @@
     glidepoint: glidepoint@2a {
         status = "okay";
     };
-    status = "okay";
-    pinnacle@2a {
-        compatible = "cirque,pinnacle";
-        reg = <0x2a>;
-        status = "okay";
-        // Add any required properties for your hardware here
-    };
 };
 
 
