@@ -24,9 +24,3 @@
 &glidepoint_listener {
     status = "okay";
 };
-/ {
-    /* THIS only makes keymap binding happy, nothing happens on peripheral side */
-	glidepoint1: virtual_input {
-		compatible = "zmk,virtual-input";
-	};
-};
