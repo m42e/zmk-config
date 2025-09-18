@@ -21,6 +21,16 @@
         ;
 };
 
+
+&i2c1 {
+    pinnacle@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        status = "okay";
+        // Add any required properties for your hardware here
+    };
+};
+
 &glidepoint {
     status = "okay";
 };
@@ -52,10 +62,4 @@
 
     // Optional
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
-};
-/ {
-    /* THIS only makes keymap binding happy, nothing happens on peripheral side */
-	glidepoint1: virtual_input {
-		compatible = "zmk,virtual-input";
-	};
 };
