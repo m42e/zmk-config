@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "lily58.dtsi"
+#include "./lily58.dtsi"
 
 &default_transform {
     col-offset = <6>;
@@ -25,16 +25,13 @@
 
 // Enable custom i2c for the Right side
 
-&cirque_pinnacle_i2c {
+&pro_micro_i2c {
     status = "okay";
 
     glidepoint: glidepoint@2a {
         status = "okay";
     };
-};
-
-
-&i2c1 {
+    status = "okay";
     pinnacle@2a {
         compatible = "cirque,pinnacle";
         reg = <0x2a>;
@@ -42,6 +39,7 @@
         // Add any required properties for your hardware here
     };
 };
+
 
 &glidepoint {
     status = "okay";
@@ -51,7 +49,7 @@
     status = "okay";
 };
 
-&pro_micro_i2c_default {
+&i2c0_default {
     group1 {
       bias-pull-up;
     };
@@ -61,7 +59,4 @@
 // Overrides for the input-split child node
 &glidepoint_split {
     device = <&glidepoint>;
-
-    // Optional
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 };
