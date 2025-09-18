@@ -20,13 +20,6 @@ config ZMK_POINTING
 config I2C
     default y
 
-if ZMK_DISPLAY
-
-config SSD1306
-    default y
-
-endif # ZMK_DISPLAY
-
 if LVGL
 
 config LV_Z_VDB_SIZE
