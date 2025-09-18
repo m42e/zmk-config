@@ -33,8 +33,26 @@
     group1 {
       bias-pull-up;
     };
+
+    glidepoint: glidepoint@0 {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        status = "okay";
+        dr-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH)>;
+        sensitivity = "2x";
+        sleep;
+        //no-taps;
+        y-invert;
+    };
 };
 
+// Overrides for the input-split child node
+&glidepoint_split {
+    device = <&glidepoint>;
+
+    // Optional
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+};
 / {
     /* THIS only makes keymap binding happy, nothing happens on peripheral side */
 	glidepoint1: virtual_input {
