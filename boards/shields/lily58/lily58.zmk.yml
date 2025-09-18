@@ -9,6 +9,7 @@ features:
   - keys
   - display
   - studio
+  - pointer
 siblings:
   - lily58_left
   - lily58_right
