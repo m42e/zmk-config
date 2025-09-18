@@ -1,5 +1,5 @@
 file_format: "1"
-id: lily58
+id: lily58mb
 name: Lily58
 type: shield
 url: https://github.com/kata0510/Lily58
@@ -11,5 +11,5 @@ features:
   - studio
   - pointer
 siblings:
-  - lily58_left
-  - lily58_right
+  - lily58mb_left
+  - lily58mb_right
