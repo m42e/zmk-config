@@ -31,12 +31,6 @@
 
 &i2c0 {
     status = "okay";
-    compatible = "nordic,nrf-twi";
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-1 = <&i2c0_sleep>;
-    pinctrl-names = "default", "sleep";
-    clock-frequency = <I2C_BITRATE_FAST>;
-
 
     glidepoint: glidepoint@2a {
         compatible = "cirque,pinnacle";
@@ -46,6 +40,14 @@
         sleep; 
         no-taps;
     };
+};
+
+&spi3 {
+  status = "disabled";
+};
+
+&spi2 {
+  status = "disabled";
 };
 
 // Overrides for the input-split child node
