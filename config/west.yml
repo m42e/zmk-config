@@ -8,13 +8,15 @@ manifest:
       url-base: https://github.com/petejohanson
     - name: halfdane
       url-base: https://github.com/halfdane/
+    - name: m42e
+      url-base: https://github.com/m42e/
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
     - name: cirque-input-module
-      remote: petejohanson
+      remote: m42e
       revision: main
   self:
     path: config
