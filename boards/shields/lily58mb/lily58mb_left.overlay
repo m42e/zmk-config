@@ -5,6 +5,11 @@
  */
 
 #include "lily58mb.dtsi"
+/ {
+    chosen {
+        zephyr,display = &oled;
+    };
+};
 
 &kscan0 {
     col-gpios
