@@ -45,7 +45,7 @@
     };
 };
 
-&pro_micro_i2c {
+&i2c0 {
     status = "okay";
     compatible = "nordic,nrf-twim";
     pinctrl-0 = <&i2c0_default>;
