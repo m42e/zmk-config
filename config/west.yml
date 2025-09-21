@@ -16,7 +16,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: cirque-input-module
-      remote: m42e
+      remote: petejohanson
       revision: main
   self:
     path: config
