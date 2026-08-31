@@ -61,11 +61,6 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         triggers-per-rotation = <20>;
     };
 
-    glidepoint_listener: glidepoint_listener {
-        compatible = "zmk,input-listener";
-        status = "disabled";
-        device = <&glidepoint>;
-    };
 };
 
 &kata0510_lily58_layout {
@@ -115,18 +110,6 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         prechargep = <0x22>;
     };
 
-    glidepoint: glidepoint@2a {
-        compatible = "cirque,pinnacle";
-        reg = <0x2a>;
-        status = "okay";
-        // Pin marked as Serial in the Dilemma PCB (008/D0) is connected to the S pin in the TRRS footprint, 
-        // so connecting this S pin to the DR pin in the Cirque, 
-        // will make the MCU be notified when there is data ready in the cirque
-        dr-gpios = <&pro_micro 0 (GPIO_ACTIVE_HIGH)>;
-        sensitivity = "2x";
-        sleep; 
-        no-taps;
-    };
 };
 
 / {
